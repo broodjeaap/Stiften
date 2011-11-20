@@ -13,12 +13,12 @@ public class App {
 		deck.fillDeck();
 		deck.shuffle();
 		
-		Card card = new Card(/*Bijvoorbeeld. Harten Aas */);
+		Card card = new Card(1,13);
 		int testIndex = 30;
 		deck.insertAt(card, testIndex);
 		System.out.print("Sequential search ...");
 		int foundIndex = deck.sequentialSearch(card);
-		System.out.println((foundIndex == testIndex)?"Win":"Fail");
+		System.out.println((foundIndex == testIndex)?"Win":"Fail"); //faalt omdat de kaart (Ace of Hearts) eerder in het deck voorkomt.
 		
 		System.out.print("Binary search...");
 		deck.sort();
